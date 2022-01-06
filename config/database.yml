@@ -62,10 +62,6 @@ development:
 test:
   <<: *default
   database: cvwo_assignment_backend_test
-  username: test
-  password: test
-  host: localhost
-  port: 5432
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -92,8 +88,4 @@ production:
   database: cvwo_assignment_backend_production
   # username: cvwo_assignment_backend
   # password: <%= ENV['CVWO_ASSIGNMENT_BACKEND_DATABASE_PASSWORD'] %>
-  username: test
-  password: test
-  host: localhost
-  port: 5432
-  url: <%= ENV['DBURI'] %>
+  url: <%= ENV['DATABASE_URL'] %>

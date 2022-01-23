@@ -32,10 +32,14 @@ class TodosController < ApplicationController
 
   # PATCH/PUT /todos/1
   def update
-    if @todo.update(todo_params)
-      render json: @todo
+    if @todo.user == @user
+      if @todo.update(todo_params)
+        render json: @todo
+      else
+        render json: @todo.errors, status: :unprocessable_entity
+      end
     else
-      render json: @todo.errors, status: :unprocessable_entity
+      render json: { error: "Access denied" }, status: :forbidden
     end
   end
 

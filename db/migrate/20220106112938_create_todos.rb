@@ -5,7 +5,7 @@ class CreateTodos < ActiveRecord::Migration[6.1]
       t.text :description
       t.string :tag
       t.boolean :completed, default: false
-      t.date :date
+      t.string :date
       t.time :time
       t.references :user, null: false, foreign_key: true, type: :uuid
 

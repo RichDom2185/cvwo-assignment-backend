@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_25_171819) do
+ActiveRecord::Schema.define(version: 2023_05_25_185338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2023_05_25_171819) do
     t.text "description"
     t.string "tag"
     t.boolean "completed", default: false
-    t.string "date"
+    t.date "date"
     t.time "time"
     t.uuid "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

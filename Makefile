@@ -1,6 +1,13 @@
-phony: build
+.PHONY: build deps dev migrateDBs
 
-build:
-	@echo "Building for production..."
-	@bundle install
+build: deps migrateDBs
+
+migrateDBs:
+	@echo "Migrating databases..."
 	@bundle exec rake db:migrate
+deps:
+	@echo "Installing dependencies..."
+	@bundle install
+dev:
+	@echo "Starting development server..."
+	@bundle exec rails server

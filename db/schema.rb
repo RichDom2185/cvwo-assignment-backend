@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_06_112938) do
+ActiveRecord::Schema.define(version: 2023_05_28_160116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -18,8 +18,9 @@ ActiveRecord::Schema.define(version: 2022_01_06_112938) do
 
   create_table "todos", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "title"
-    t.text "content"
+    t.text "description"
     t.string "tag"
+    t.boolean "completed", default: false
     t.date "date"
     t.time "time"
     t.uuid "user_id", null: false
@@ -29,10 +30,12 @@ ActiveRecord::Schema.define(version: 2022_01_06_112938) do
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name"
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "todos", "users"

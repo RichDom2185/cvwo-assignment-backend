@@ -79,7 +79,7 @@ GEM
       activesupport (>= 5.0)
     i18n (1.13.0)
       concurrent-ruby (~> 1.0)
-    jwt (2.8.1)
+    jwt (2.8.2)
       base64
     listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)

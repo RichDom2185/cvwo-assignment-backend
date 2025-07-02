@@ -1,33 +1,8 @@
-<!-- # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ... -->
-
 # thing.do backend
 
-Available on Heroku: [https://thing-do-backend.herokuapp.com/](https://thing-do-backend.herokuapp.com/)
+Available on Render: [https://thing-do-api.onrender.com](https://thing-do-api.onrender.com)
 
-*Note that this is an API, backend-only address. You can't access the frontend.*
+*Note that the above is the API. To access the frontend, visit [https://thing-do.netlify.app](https://thing-do.netlify.app).*
 
 Made by:
 
@@ -80,7 +55,7 @@ bundle exec rails server
 
 ## Upgrading the ruby version
 
-Follow the guide [here](https://guides.rubyonrails.org/upgrading_ruby_on_rails.html), substituting `rails` with `bundle exec rails` where necessary.
+Follow this [guide](https://guides.rubyonrails.org/upgrading_ruby_on_rails.html), substituting `rails` with `bundle exec rails` where necessary.
 
 ## Using Docker
 

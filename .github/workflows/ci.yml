@@ -20,7 +20,7 @@ jobs:
           --health-retries 50
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:

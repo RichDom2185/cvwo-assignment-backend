@@ -86,7 +86,7 @@ GEM
     cgi (0.5.2)
     concurrent-ruby (1.3.8)
     connection_pool (3.0.2)
-    crass (1.0.7)
+    crass (1.0.8)
     date (3.5.1)
     dotenv (3.2.0)
     dotenv-rails (3.2.0)
@@ -126,14 +126,14 @@ GEM
     mini_mime (1.1.5)
     minitest (5.27.0)
     msgpack (1.8.4)
-    net-imap (0.6.6)
+    net-imap (0.6.8)
       date
       net-protocol
     net-pop (0.1.2)
       net-protocol
     net-protocol (0.3.0)
       timeout
-    net-smtp (0.5.1)
+    net-smtp (0.5.2)
       net-protocol
     nio4r (2.7.5)
     nokogiri (1.19.4-arm64-darwin)
@@ -144,7 +144,7 @@ GEM
     pg (1.6.3-x86_64-linux)
     pp (0.6.4)
       prettyprint
-    prettyprint (0.2.0)
+    prettyprint (0.2.1)
     psych (5.2.6)
       date
       stringio
